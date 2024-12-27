@@ -14,7 +14,11 @@ public class PaymentReceipt {
     private int otherCharge;
     private int totalCharge;
     private int finalPayableAmount;
-
+    
+    public PaymentReceipt()
+    {
+    	
+    }
     // Constructor
     public PaymentReceipt(int receiptId, int customerId, int cropId, int qualityId, int qualityWeight, int rate, int qualityAmount, int porteringCharge, int measuringCharge, int vehicleRent, int otherCharge, int totalCharge, int finalPayableAmount) {
         this.receiptId = receiptId;
@@ -71,4 +75,22 @@ public class PaymentReceipt {
 
     public int getFinalPayableAmount() { return finalPayableAmount; }
     public void setFinalPayableAmount(int finalPayableAmount) { this.finalPayableAmount = finalPayableAmount; }
+    
+    @Override
+    public String toString() {
+        return "Receipt ID          = " + receiptId +
+               "\nCustomer ID         = " + customerId +
+               "\nCrop ID             = " + cropId +
+               "\nQuality ID          = " + qualityId +
+               "\nQuality Weight      = " + qualityWeight +
+               "\nRate                = " + rate +
+               "\nQuality Amount      = " + qualityAmount +
+               "\nPortering Charge    = " + porteringCharge +
+               "\nMeasuring Charge    = " + measuringCharge +
+               "\nVehicle Rent        = " + vehicleRent +
+               "\nOther Charge        = " + otherCharge +
+               "\nTotal Charge        = " + totalCharge +
+               "\nFinal Payable Amount = " + finalPayableAmount;
+    }
+
 }
